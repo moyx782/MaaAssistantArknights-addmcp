@@ -1,0 +1,5 @@
+add_library(MaaMcp STATIC MaaMcp.cpp)
+target_compile_features(MaaMcp PUBLIC cxx_std_20)
+target_include_directories(MaaMcp PUBLIC ${PROJECT_SOURCE_DIR}/include)
+target_link_libraries(MaaMcp PRIVATE MaaCore)
+set_target_properties(MaaMcp PROPERTIES OUTPUT_NAME MaaMcp)
