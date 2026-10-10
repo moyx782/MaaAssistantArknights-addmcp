@@ -200,3 +200,11 @@ Bilibili 直播间：[MrEO 直播间](https://live.bilibili.com/2808861) 直播�
 开发者群：[QQ 群](https://jq.qq.com/?_wv=1027&k=JM9oCk3C)
 
 如果觉得软件对你有帮助，帮忙点个 Star 吧！~（网页最上方右上角的小星星），这就是对我们最大的支持了！
+# MCP decision-layer adapter
+
+An optional transport-agnostic `MaaMcp` static library is provided for
+integrations that need a small MCP control surface without changing MaaCore's
+OCR/input implementation. It exposes read-only state observation and guarded
+deploy/retreat/skill/speed/pause actions through callbacks. Actions require a
+state-hash CAS token, idempotency key, timeout and safety gate. See
+`docs/mcp-decision-layer.md` and enable `BUILD_MCP_TESTS` for the smoke test.
